@@ -1,0 +1,83 @@
+<div class="text-layout">
+  <h2>Basics Pipes</h2>
+  <p>Angular Pipes</p>
+</div>
+
+<div class="grid text-layout">
+  <div class="col-4">
+    <p-card [header]="'uppercase' | titlecase">
+      <ng-template pTemplate="content">
+        {{ name | uppercase }}
+      </ng-template>
+    </p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card [header]="'lowercase' | titlecase">
+      <ng-template pTemplate="content">
+        {{ name | lowercase }}
+      </ng-template>
+    </p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card [header]="'titlecase' | titlecase">
+      <ng-template pTemplate="content">
+        {{ name | titlecase }}
+      </ng-template>
+    </p-card>
+  </div>
+</div>
+
+<div class="text-layout">
+  <h2>Dates Pipes</h2>
+</div>
+
+<div class="grid text-layout">
+  <div class="col-5">
+    <p-card>
+      <ul>
+        <li class="flex">
+          <span style="font-weight: 900">Date (normal) :</span>
+          <span style="font-weight: 400">{{ date }}</span>
+        </li>
+        <li class="flex">
+          <span style="font-weight: 900">Date | pipe :</span>
+          <span style="font-weight: 400">{{ date | date }}</span>
+        </li>
+        <li class="flex">
+          <span style="font-weight: 900">Date | pipe:'short' :</span>
+          <span style="font-weight: 400">{{ date | date : "short" }}</span>
+        </li>
+        <li class="flex">
+          <span style="font-weight: 900">Date | pipe:'long' :</span>
+          <span style="font-weight: 400">{{ date | date : "long" }}</span>
+        </li>
+        <li class="flex">
+          <span style="font-weight: 900">Date | pipe:'fullDate' :</span>
+          <span style="font-weight: 400">{{ date | date : "fullDate" }}</span>
+        </li>
+        <li class="flex">
+          <span style="font-weight: 900">Date | pipe:'MMMM dd, yyyy' :</span>
+          <span style="font-weight: 400">{{
+            date | date : "MMMM dd, yyyy"
+          }}</span>
+        </li>
+        <li class="flex">
+          <span style="font-weight: 900">Date | pipe:'long':'GMT-3' :</span>
+          <span style="font-weight: 400">{{
+            date | date : "long" : "GMT-3"
+          }}</span>
+        </li>
+        <li class="flex">
+          <span style="font-weight: 900"
+            >Date | pipe:'long':'GMT-3':'es' :</span
+          >
+          <span style="font-weight: 400">{{
+            date | date : "long" : "" : "es"
+          }}</span>
+        </li>
+      </ul>
+    </p-card>
+  </div>
+</div>
