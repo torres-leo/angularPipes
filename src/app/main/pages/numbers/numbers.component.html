@@ -1,1 +1,24 @@
-<p>numbers works!</p>
+<div class="text-layout">
+  <h2>Decimal Pipes & Percent</h2>
+  <p>Angular Pipes</p>
+</div>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="Sales" subheader="pipe: number">{{
+      sales | number : ".1-3" : "es-NI"
+    }}</p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="Sales" subheader="pipe: currency">{{
+      sales | currency : "C$" : "code"
+    }}</p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="Percent" subheader="pipe: percent">{{
+      percent | percent : "2.2-2"
+    }}</p-card>
+  </div>
+</div>
