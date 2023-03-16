@@ -75,4 +75,16 @@
       <p>{{ heroes | json }}</p>
     </p-fieldset>
   </div>
+
+  <div class="col-12 md:col-6 sm:col">
+    <p-fieldset
+      legend="Async Pipe"
+      [toggleable]="true"
+      [transitionOptions]="'200ms'"
+    >
+      <pre>{{ myObservable | async }}</pre>
+      <p *ngIf="!(promise | async)">Loading...</p>
+      <pre>{{ promise | async }}</pre>
+    </p-fieldset>
+  </div>
 </div>

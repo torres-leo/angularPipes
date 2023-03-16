@@ -4,13 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonsComponent } from './main/pages/commons/commons.component';
 import { NumbersComponent } from './main/pages/numbers/numbers.component';
 import { NotCommonsComponent } from './main/pages/not-commons/not-commons.component';
-import { SortComponent } from './main/pages/sort/sort.component';
+import { CustomPipesComponent } from './main/pages/custom-pipes/custom-pipes.component';
 
 const routes: Routes = [
   { path: '', component: CommonsComponent, pathMatch: 'full' },
   { path: 'numbers', component: NumbersComponent },
   { path: 'not-commons', component: NotCommonsComponent },
-  { path: 'sort', component: SortComponent },
+  { path: 'custom-pipes', component: CustomPipesComponent },
   { path: '**', redirectTo: '' },
 ];
 
